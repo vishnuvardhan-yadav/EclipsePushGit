@@ -1,4 +1,4 @@
-package com.loops;
+package com.datatTypes;
 
 public class Example1 {
 	static void revNum(int num) {																		
