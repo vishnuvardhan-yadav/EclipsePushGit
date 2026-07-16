@@ -32,7 +32,7 @@ public class Ex1 {
 //        primeNum(num);
     	
     		final int num = 5;
-    		int num = 10;
+//    		int num = 10;
     		System.out.println(num);
     }
 }
