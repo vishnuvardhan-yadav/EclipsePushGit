@@ -9,7 +9,7 @@ public class SumOfNat {
 		
 		return sum;
 	}
-	 static void main(String[] args) {
+	 public static void main(String[] args) {
 		int num = 10;
 		System.out.println(sumOfNat(num));
 	}
