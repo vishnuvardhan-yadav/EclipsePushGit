@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class LeftShiftOperator {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter Number : ");
@@ -12,9 +13,7 @@ public class LeftShiftOperator {
         System.out.print("Enter Shift Positions : ");
         int shift = sc.nextInt();
 
-        int result = num << shift;
-
-        System.out.println("Result After Left Shift : " + result);
+        System.out.println("Result After Left Shift : " + (num << shift));
 
         sc.close();
     }
