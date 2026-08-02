@@ -2,17 +2,20 @@ package com.operators;
 
 import java.util.Scanner;
 
-public class BitwiseComplement {
+public class BitwiseOperations {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter Number : ");
-        int num = sc.nextInt();
+        System.out.print("Enter First Number : ");
+        int num1 = sc.nextInt();
 
-        int result = ~num;
+        System.out.print("Enter Second Number : ");
+        int num2 = sc.nextInt();
 
-        System.out.println("Original Number   : " + num);
-        System.out.println("Complement Result : " + result);
+        System.out.println("Bitwise AND : " + (num1 & num2));
+        System.out.println("Bitwise OR : " + (num1 | num2));
+        System.out.println("Bitwise XOR : " + (num1 ^ num2));
 
         sc.close();
     }
