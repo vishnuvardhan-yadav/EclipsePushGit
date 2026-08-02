@@ -1,20 +1,14 @@
 package com.operators;
 
-import java.util.Scanner;
-
 public class RightShiftOperator {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        int num = 40;
+        int shift = 2;
 
-        System.out.print("Enter Number : ");
-        int num = sc.nextInt();
-
-        System.out.print("Enter Shift Positions : ");
-        int shift = sc.nextInt();
+        System.out.println("Enter Number          : " + num);
+        System.out.println("Enter Shift Positions : " + shift);
 
         System.out.println("Result After Right Shift : " + (num >> shift));
-
-        sc.close();
     }
 }
