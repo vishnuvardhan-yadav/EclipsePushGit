@@ -1,36 +1,40 @@
 package com.constructor;
 
-
 public class BankAccountClass {
-	int Accountnumber;
-	String AccountHolder;
-	double Balance;
-	BankAccountClass(int Accountnumber,String AccountHolder,double Balance){
-		this.Accountnumber=Accountnumber;
-		this.AccountHolder=AccountHolder;
-		this.Balance=Balance;
+	String customerName;
+	String customerAddress;
+	long phoneNumber;
+	double balance;
+
+	BankAccountClass(String customerName, String customerAddress, long phoneNumber, double balance) {
+		this.customerName = customerName;
+		this.customerAddress = customerAddress;
+		this.phoneNumber = phoneNumber;
+		this.balance = balance;
 	}
-	public int getAccountnumber() {
-		return Accountnumber;
-	}
-	public String getAccountHolder() {
-		return AccountHolder;
-	}
-	public double getBalance() {
-		return Balance;
-	}
-	public void Deposit(double Amount) {
-		Balance=Balance+Amount;
-		System.out.println("Deposited Amount:"+Amount);
-	}
-	public void withdraw(double Amount) {
-		if(Balance>=Amount) {
-			Balance=Balance-Amount;
-			System.out.println("Withdrawn Amount:"+Amount);
-		}else {
-			System.out.println("Insufficient Balance");
+	
+	public  void deposit(double amount) {
+		if(balance > 0) {
+			balance = amount + balance;
+			System.out.println("Displays a success message with the updated balance.");
+			System.out.println("updated balance is "+balance);
+		} else {
+			System.out.println("In sufficient Amount");
 		}
-		
+	}
+	
+	public void withDraw(double amount) {
+		if(amount <= balance) {
+			balance = balance - amount;
+			System.out.println("If the withdrawal is successful");
+			System.out.println("The current amout after withdraw:"+balance);
+		} else {
+			System.out.println("Invalid Amount");
+		}
+	}
+	
+	public void showBalance() {
+		System.out.println("Your current Balance:"+balance);
 	}
 
 }
